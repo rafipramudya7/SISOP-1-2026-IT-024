@@ -1,0 +1,209 @@
+Nama Penumpang,Usia,Kursi Kelas,Gerbong
+Budi Hartanto,34,Economy,Gerbong2
+Sinta Livia,28,Business,Gerbong1
+Andi Zaky,45,Economy,Gerbong4
+Rina Wulandari,22,Economy,Gerbong3
+Doni Sodikin,39,Business,Gerbong2
+Ayu Lestari,19,Economy,Gerbong1
+Fajar Binar,50,Executive,Gerbong4
+Tono Hartanto,31,Economy,Gerbong2
+Wati Sukmawati,27,Economy,Gerbong3
+Rizky Nasrullah,41,Business,Gerbong1
+Nina Karina,36,Economy,Gerbong4
+Bayu Kurniawan,24,Economy,Gerbong2
+Sari,29,Business,Gerbong3
+Andika Wira,55,Executive,Gerbong1
+Lina Reawati,33,Economy,Gerbong4
+Yoga Dwi Laksono,21,Economy,Gerbong1
+Putri Syahputra,26,Economy,Gerbong2
+Hendra Maulana,44,Business,Gerbong4
+Megawatee,38,Economy,Gerbong3
+Udin Yudin,60,Executive,Gerbong2
+Cici Syakilla,23,Economy,Gerbong1
+Arif Rahman,35,Economy,Gerbong3
+Tari Atika,47,Business,Gerbong2
+Iwan Syarifuddin,52,Economy,Gerbong4
+Naufal Ardhana,20,Economy,Gerbong1
+Robby Pambudi,42,Business,Gerbong3
+Susi Susilowati,25,Economy,Gerbong2
+Yani Yanto,30,Economy,Gerbong4
+Bagus Lukman,48,Business,Gerbong1
+Kiki Kailina,34,Economy,Gerbong3
+I Gede Bagus,17,Economy,Gerbong3
+Made Gana,17,Economy,Gerbong3
+Sunah Ali,19,Economy,Gerbong1
+Lukman Ali Santoso,30,Business,Gerbong4
+Zainuddin,36,Business,Gerbong4
+Hanifa,40,Economy,Gerbong2
+Charlie Kirk,55,Executive,Gerbong1
+Jeffrey Epstein,50,Executive,Gerbong1
+Ksi,32,Executive,Gerbong1
+Ahmad Ibnu,20,Business,Gerbong2
+Paundra Jopu,20,Business,Gerbong2
+Ahmad Afin,21,Business,Gerbong2
+Kai Cenat,35,Economy,Gerbong3
+Dinda Kirana,25,Economy,Gerbong1
+Reza Rahadian,36,Executive,Gerbong1
+Siti Aminah,54,Business,Gerbong2
+Bambang Pamungkas,43,Business,Gerbong4
+Joko Anwar,47,Executive,Gerbong2
+Melati Suci,21,Economy,Gerbong3
+Kevin Sanjaya,28,Executive,Gerbong1
+Raditya Dika,39,Business,Gerbong4
+Gibran Rakabuming,37,Executive,Gerbong2
+Maudy Ayunda,30,Executive,Gerbong1
+Agnez Mo,38,Executive,Gerbong1
+Baim Wong,42,Business,Gerbong3
+Raffi Ahmad,37,Executive,Gerbong1
+Nagita Slavina,36,Executive,Gerbong1
+Deddy Corbuzier,49,Executive,Gerbong4
+Cinta Laura,31,Business,Gerbong2
+Tulus,37,Business,Gerbong3
+Isyana Sarasvati,31,Business,Gerbong1
+Raisa Andriana,34,Executive,Gerbong1
+Ariel Noah,44,Executive,Gerbong2
+Luna Maya,41,Business,Gerbong4
+Anya Geraldine,29,Business,Gerbong2
+Jerome Polin,26,Economy,Gerbong1
+Fadil Jaidi,30,Business,Gerbong3
+Tasya Farasya,32,Executive,Gerbong4
+Rachel Vennya,29,Business,Gerbong2
+Denny Sumargo,42,Executive,Gerbong1
+Ernest Prakasa,42,Business,Gerbong4
+Panji Pragiwaksono,45,Business,Gerbong3
+Sule Sutisna,47,Business,Gerbong2
+Andre Taulany,50,Executive,Gerbong1
+Vincent Rompies,44,Business,Gerbong4
+Desta Mahendra,47,Business,Gerbong3
+Enzy Storia,32,Economy,Gerbong2
+Hesti Purwadinata,41,Economy,Gerbong1
+Surya Insomnia,38,Business,Gerbong4
+Wendy Cagur,45,Economy,Gerbong2
+Kiky Saputri,31,Economy,Gerbong3
+Marshel Widianto,28,Economy,Gerbong1
+Celine Evangelista,32,Business,Gerbong4
+Stefan William,31,Business,Gerbong2
+Natasha Wilona,26,Economy,Gerbong3
+Verrell Bramasta,28,Executive,Gerbong1
+Atta Halilintar,30,Executive,Gerbong4
+Aurel Hermansyah,26,Executive,Gerbong2
+Ashanty,41,Executive,Gerbong1
+Anang Hermansyah,55,Executive,Gerbong4
+Krisdayanti,49,Executive,Gerbong3
+Raul Lemos,54,Executive,Gerbong2
+Ammar Zoni,31,Business,Gerbong1
+Irish Bella,28,Business,Gerbong4
+Rizky Billar,29,Business,Gerbong3
+Lesti Kejora,25,Business,Gerbong2
+Boy William,33,Executive,Gerbong1
+Gilang Dirga,35,Business,Gerbong4
+Irfan Hakim,48,Executive,Gerbong3
+Ramzi,48,Business,Gerbong2
+Ruben Onsu,41,Executive,Gerbong1
+Sarwendah,35,Executive,Gerbong4
+Betrand Peto,19,Economy,Gerbong3
+Al Ghazali,27,Executive,Gerbong2
+El Rumi,25,Executive,Gerbong1
+Dul Jaelani,24,Executive,Gerbong4
+Maia Estianty,48,Executive,Gerbong3
+Ahmad Dhani,52,Executive,Gerbong2
+Mulan Jameela,45,Executive,Gerbong1
+Ari Lasso,51,Executive,Gerbong4
+Judika,46,Executive,Gerbong3
+Rossa,46,Executive,Gerbong2
+Afgan Syahreza,35,Executive,Gerbong1
+Vidi Aldiano,34,Business,Gerbong4
+Sheila Dara,32,Business,Gerbong3
+Prilly Latuconsina,28,Business,Gerbong2
+Aliando Syarief,28,Economy,Gerbong1
+Syifa Hadju,24,Economy,Gerbong4
+Rizky Nazar,28,Business,Gerbong3
+Angga Yunanda,24,Economy,Gerbong2
+Adhisty Zara,21,Economy,Gerbong1
+Iqbaal Ramadhan,25,Executive,Gerbong4
+Vanesha Prescilla,25,Business,Gerbong3
+Jefri Nichol,25,Business,Gerbong2
+Amanda Manopo,25,Business,Gerbong1
+Arya Saloka,33,Executive,Gerbong4
+Glenca Chysara,29,Economy,Gerbong3
+Evan Sanders,43,Business,Gerbong2
+Surya Saputra,49,Executive,Gerbong1
+Natasha Dewanti,46,Business,Gerbong4
+Sari Nila,51,Executive,Gerbong3
+Chika Waode,42,Economy,Gerbong2
+Ayya Renita,31,Economy,Gerbong1
+Ikbal Fauzi,31,Business,Gerbong4
+Mayang Lucyana,21,Economy,Gerbong3
+Fujianti Utami,22,Economy,Gerbong2
+Thariq Halilintar,25,Business,Gerbong1
+Aaliyah Massaid,23,Business,Gerbong4
+Angelina Sondakh,48,Executive,Gerbong3
+Keanu Agl,26,Business,Gerbong2
+Dara Arafah,24,Economy,Gerbong1
+Lula Lahfah,25,Economy,Gerbong4
+Awkarin,27,Business,Gerbong3
+Sabian Tama,29,Business,Gerbong2
+Erika Carlina,31,Business,Gerbong1
+Hasyakyla Utami,22,Economy,Gerbong4
+Bio One,27,Business,Gerbong3
+Bebby Fey,33,Economy,Gerbong2
+Lucinta Luna,35,Business,Gerbong1
+Millen Cyrus,25,Business,Gerbong4
+Ivan Gunawan,44,Executive,Gerbong3
+Soimah Pancawati,43,Executive,Gerbong2
+Nassar,36,Executive,Gerbong1
+Dewi Perssik,38,Executive,Gerbong4
+Inul Daratista,45,Executive,Gerbong3
+Adam Suseno,64,Executive,Gerbong2
+King Nassar,36,Executive,Gerbong1
+Jirayut,23,Economy,Gerbong4
+Selfi LIDA,24,Economy,Gerbong3
+Rara LIDA,22,Economy,Gerbong2
+Faul LIDA,28,Business,Gerbong1
+Gunawan LIDA,27,Economy,Gerbong4
+Hari LIDA,27,Economy,Gerbong3
+Nia LIDA,22,Economy,Gerbong2
+Ridwan LIDA,29,Economy,Gerbong1
+Meli LIDA,20,Economy,Gerbong4
+Dini LIDA,19,Economy,Gerbong3
+Janna LIDA,21,Economy,Gerbong2
+Zahra LIDA,21,Economy,Gerbong1
+Ica LIDA,20,Economy,Gerbong4
+Sulis LIDA,24,Economy,Gerbong3
+Ratna LIDA,24,Economy,Gerbong2
+Iqhbal LIDA,32,Business,Gerbong1
+Faisal LIDA,24,Economy,Gerbong4
+Anto Wijaya,53,Economy,Gerbong2
+Ken Ken,56,Economy,Gerbong3
+Barry Prima,69,Executive,Gerbong4
+Advent Bangun,66,Executive,Gerbong1
+George Rudy,68,Executive,Gerbong2
+Willy Dozan,67,Executive,Gerbong3
+Dede Yusuf,59,Executive,Gerbong4
+Rano Karno,65,Executive,Gerbong1
+Yessy Gusman,63,Executive,Gerbong2
+Paramitha Rusady,57,Executive,Gerbong3
+Desy Ratnasari,50,Executive,Gerbong4
+Meriam Bellina,59,Executive,Gerbong1
+Lydia Kandou,61,Executive,Gerbong2
+Jamal Mirdad,63,Executive,Gerbong3
+Naysila Mirdad,36,Business,Gerbong4
+Nana Mirdad,39,Business,Gerbong1
+Andrew White,39,Business,Gerbong2
+Kenang Mirdad,37,Business,Gerbong3
+Tyna Kanna,34,Business,Gerbong4
+Marsha Timothy,45,Executive,Gerbong1
+Vino G Bastian,42,Executive,Gerbong2
+Indro Warkop,66,Executive,Gerbong3
+Kasino,47,Business,Gerbong4
+Dono,50,Business,Gerbong1
+Jaja Mihardja,85,Executive,Gerbong2
+Bolot,70,Business,Gerbong3
+Malih,70,Business,Gerbong4
+Nunung,61,Business,Gerbong1
+Tessy,69,Business,Gerbong2
+Tarzan,69,Executive,Gerbong3
+Polo,61,Business,Gerbong4
+Kadir,69,Business,Gerbong1
+Doyok,69,Business,Gerbong2
+Gogon,58,Business,Gerbong3

@@ -1,0 +1,18 @@
+[H[2J[3J=========================================================================
+                           LAPORAN KEUANGAN KOST SLEBEW
+=========================================================================
+Total pemasukan (Aktif) : Rp1.466
+Total tunggakan         : Rp14.466
+Jumlah Kamar terisi     : 6
+-------------------------------------------------------------------------
+Daftar penghuni menunggak:
+  rafi
+  rafi
+  rafi
+  pramudya
+
+
+=========================================================================
+[] Laporan berhasil disimpan ke rekap/laporan_bulanan.txt
+
+

@@ -133,6 +133,55 @@ editStatus(){
     clear
 }
 
+cetakLaporan(){
+    clear
+    echo "========================================================================="
+    echo "                           LAPORAN KEUANGAN KOST SLEBEW"
+    echo "========================================================================="
+    read totalAktif totalMenunggak  totalKamar <<< $(awk -F',' '
+    BEGIN{
+    jumlahAktif=0
+    jumlahTunggak=0
+    totalKamar=0
+    }
+    {
+    if($5 == "Aktif")jumlahAktif+=$3
+    if($5 == "Menunggak")jumlahTunggak+=$3
+    totalKamar++
+    }
+    END{
+    print jumlahAktif,jumlahTunggak,totalKamar
+    }' data/penghuni.csv)
+
+    rupiahAktif=$(printf "Rp%s" "$(echo "$totalAktif" | sed ':a;s/\B[0-9]\{3\}\>/.&/;ta')")
+    rupiahMenunggak=$(printf "Rp%s" "$(echo "$totalMenunggak" | sed ':a;s/\B[0-9]\{3\}\>/.&/;ta')")
+
+
+
+    echo "Total pemasukan (Aktif) : $rupiahAktif"
+    echo "Total tunggakan         : $rupiahMenunggak"
+    echo "Jumlah Kamar terisi     : $totalKamar"
+    echo "-------------------------------------------------------------------------"
+    echo "Daftar penghuni menunggak:"
+    awk -F',' 'BEGIN{
+    kosong=1
+    }
+    {
+    if($5 == "Menunggak"){
+    kosong=0
+    print "  "$1
+    }
+    }
+    END{
+    if(kosong)print "  Tidak ada tunggakan"
+    }
+    ' data/penghuni.csv
+
+    echo -e "\n\n========================================================================="
+
+    echo -e "[] Laporan berhasil disimpan ke rekap/laporan_bulanan.txt\n\n"
+}
+
 while true; do
     
     showMenu
@@ -143,11 +192,19 @@ while true; do
         2)deleteMember;;
         3)
             clear
-            showMember;;
+        showMember;;
         4)editStatus;;
+        5)
+            cetakLaporan
+            cetakLaporan > rekap/laporan_bulanan.txt
+            read -p "[PRESS] jika mau melanjutkan"
+            clear;;
+
         *)
             echo "Terimakasih telah menggunakan aplikasi"
             break
         ;;
     esac
 done
+# [PROBLEM]
+# space yang membingunkan antara deklarasi dengan menjalankan fungsi 

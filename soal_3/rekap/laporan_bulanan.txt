@@ -1,15 +1,12 @@
-[H[2J[3J=========================================================================
+=========================================================================
                            LAPORAN KEUANGAN KOST SLEBEW
 =========================================================================
-Total pemasukan (Aktif) : Rp1.466
-Total tunggakan         : Rp14.466
-Jumlah Kamar terisi     : 6
+Total pemasukan (Aktif) : Rp0
+Total tunggakan         : Rp0
+Jumlah Kamar terisi     : 0
 -------------------------------------------------------------------------
 Daftar penghuni menunggak:
-  rafi
-  rafi
-  rafi
-  pramudya
+  Tidak ada tunggakan
 
 
 =========================================================================

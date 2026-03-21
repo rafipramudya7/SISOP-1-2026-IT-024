@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 
 showBanner() {
     echo ""
@@ -50,6 +51,7 @@ addMember(){
     read -rp "Masukan harga sewa: " harga
     if [[ $harga -lt 0 ]]; then
         echo "harga tidak boleh minus"
+        
         return
     fi
     
@@ -62,7 +64,6 @@ addMember(){
     today=$(date +%Y-%m-%d)
     if [[ "$tanggal" > "$today" ]]; then
         echo "masak kamu dari masa depan sihh"
-        
         return
     fi
     
@@ -86,13 +87,19 @@ deleteMember(){
         echo "nama tidak boleh kosong"
         return
     fi
+
+    if ! grep -qi "^$nama" data/penghuni.csv; then
+        echo "Nama tidak ditemukan"
+        return
+    fi
     grep -i "^$nama" data/penghuni.csv | while IFS= read -r line; do
-        echo "$line,$tanggalHapus" >>  sampah/history_hapus.csv
-    done
+          echo "$line,$tanggalHapus" >>  sampah/history_hapus.csv
+        done
+        grep -vi "^$nama" data/penghuni.csv >> data/penghuni.tmp | mv data/penghuni.tmp data/penghuni.csv
+        echo "Data penghuni \"$nama\" berhasil diarsipkan ke sampah/history_hapus.csv dan dihapus dari sistem."
     
-    grep -vi "^$nama" data/penghuni.csv >> data/penghuni.tmp | mv data/penghuni.tmp data/penghuni.csv
+
     
-    echo "Data penghuni \"$nama\" berhasil diarsipkan ke sampah/history_hapus.csv dan dihapus dari sistem."
     read -p "[press] untuk melanjutkan"
     clear
     
@@ -123,11 +130,24 @@ editStatus(){
     read -rp "Masukan Nama Penghuni: " nama
     read -rp "Masukan  Status Baru (Aktif/Menunggak)" status
     
-    awk  -F',' -v n="$nama" -v s="$status" 'BEGIN{OFS=","}''{
+    if awk -F',' -v n="$nama" -v s="$status" '
+    BEGIN{OFS=","; kosong=1}
+    {
         if($1 == n){
-        $5 = s}{print}
-    }' data/penghuni.csv > data/penghuni.tmp && mv data/penghuni.tmp data/penghuni.csv
-    echo "status \"$nama\" sudah diubah menjadi: $status"
+            kosong=0
+            $5 = s
+        }
+        print
+    }
+    END{
+        if(kosong) exit 1
+    }' data/penghuni.csv > data/penghuni.tmp; then
+        mv data/penghuni.tmp data/penghuni.csv
+        echo "status \"$nama\" sudah diubah menjadi: $status"
+    else
+        rm -f data/penghuni.tmp
+        echo "[WARNING] data tidak ditemukan"
+    fi
     
     read -p "[press] untuk melanjutkan"
     clear
@@ -182,6 +202,82 @@ cetakLaporan(){
     echo -e "[] Laporan berhasil disimpan ke rekap/laporan_bulanan.txt\n\n"
 }
 
+
+cronManage(){
+    while true; do
+    echo "========================================================================="
+    echo "                           LAPORAN KEUANGAN KOST SLEBEW"
+    echo "========================================================================="
+    echo "1. Lihat cron job aktif"
+    echo "2. Daftarkan cron job pengingat"
+    echo "3. Hapus cron job pengingat"
+    echo "4. kembali"
+    echo "========================================================================="
+    read -rp "Pilih [1-4]:" pilihan
+
+    case $pilihan in 
+        1)
+            echo " --- Daftar cron job pengingat tagihan ---"
+            crontab -l
+            read -p "[PRESS] untuk kembali ke menu.... ";;
+        2) 
+            echo -e "\n\n"
+            read -rp "Masukan Jam (0-23):" jam
+            read -rp "Masukan Menit (0-59):" menit
+
+            if ! [[ "$jam" =~ ^[0-9]+$ ]] || [[ "$jam" -gt 23 ]]; then
+                echo "Jam tidak valid"
+                read -p "[PRESS] untuk kembali"
+                continue
+            fi 
+
+            if ! [[ "$menit" =~ ^[0-9]+$ ]] || [[ "$jam" -gt 59 ]]; then
+                echo "menit tidak valid"
+                read -p "[PRESS] untuk kembali"
+                continue
+            fi
+
+            (crontab -l | grep -v "kost_slebew.sh --check-tagihan";
+             printf "%s %s * * * /mnt/e/SISOP-1-2026-IT-024/soal_3/kost_slebew.sh --check-tagihan \n" "$menit" "$jam"  
+             echo""
+            )| crontab - ;;
+            # (
+            # crontab -l  | grep -v "kost_slebew.sh --check-tagihan"
+            # printf "%s %s * * * /mnt/e/SISOP-1-2026-IT-024/soal_3/kost_slebew.sh --check-tagihan\n" "$menit" "$jam"  ; echo ""
+            # ) | crontab -;;
+
+        3)
+            crontab -l | grep -v "kost_slebew.sh --check-tagihan" | crontab -
+            echo "Cron job pengingat tagihan berhasil dihapus."
+            read -p "[PRESS] untuk melanjutkan";;
+        *)
+        echo "Keluar dari cron pengingat dan kembali ke menu utama"
+        read -p "[PRESS] untuk melanjutkan"
+        clear
+            break;;
+    esac
+    done
+}
+
+
+checkTagihan(){
+    touch contohku.txt
+    # echo "masukk dalam"
+    time=$(date +%y-%m-%d)
+    awk -F',' -v waktu="$time" '{
+    if($5 == "Menunggak"){
+        printf("['%s'] TAGIHAN: %s KAMAR: %s MENUNGGAK Rp%s\n",waktu,$1,$2,$3)
+    }
+    }' data/penghuni.csv >> log/tagihan.log
+}
+
+
+if [[ "$1" == "--check-tagihan" ]]; then
+    printf "jalan crown nya"
+
+    checkTagihan
+    exit 0
+fi
 while true; do
     
     showMenu
@@ -191,7 +287,6 @@ while true; do
         1) addMember;;
         2)deleteMember;;
         3)
-            clear
         showMember;;
         4)editStatus;;
         5)
@@ -199,12 +294,17 @@ while true; do
             cetakLaporan > rekap/laporan_bulanan.txt
             read -p "[PRESS] jika mau melanjutkan"
             clear;;
-
+        6)
+            tanggal=$(date "+%y-%m-%d-%H-%M")
+            printf "$tanggal"
+            cronManage;;
         *)
             echo "Terimakasih telah menggunakan aplikasi"
             break
         ;;
     esac
-done
+done 
 # [PROBLEM]
 # space yang membingunkan antara deklarasi dengan menjalankan fungsi 
+# apakah jika disimpan lalu bisa digunakan sebagai integer dan string jika bisa strign apakah bisa dilakukan operasi
+# pembungkusan string dengan petik dua

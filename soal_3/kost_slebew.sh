@@ -225,13 +225,13 @@ cronManage(){
             read -rp "Masukan Jam (0-23):" jam
             read -rp "Masukan Menit (0-59):" menit
 
-            if ! [[ "$jam" =~ ^[0-9]+$ ]] || [[ "$jam" -gt 23 ]]; then
+            if ! [[ "$jam" =~ ^[0-9]{2} ]] || [[ "$jam" -gt 23 ]]; then
                 echo "Jam tidak valid"
                 read -p "[PRESS] untuk kembali"
                 continue
             fi 
 
-            if ! [[ "$menit" =~ ^[0-9]+$ ]] || [[ "$jam" -gt 59 ]]; then
+            if ! [[ "$menit" =~ ^[0-9]{2} ]] || [[ "$jam" -gt 59 ]]; then
                 echo "menit tidak valid"
                 read -p "[PRESS] untuk kembali"
                 continue
@@ -261,8 +261,6 @@ cronManage(){
 
 
 checkTagihan(){
-    touch contohku.txt
-    # echo "masukk dalam"
     time=$(date +%y-%m-%d)
     awk -F',' -v waktu="$time" '{
     if($5 == "Menunggak"){
@@ -273,7 +271,6 @@ checkTagihan(){
 
 
 if [[ "$1" == "--check-tagihan" ]]; then
-    printf "jalan crown nya"
 
     checkTagihan
     exit 0
@@ -295,8 +292,6 @@ while true; do
             read -p "[PRESS] jika mau melanjutkan"
             clear;;
         6)
-            tanggal=$(date "+%y-%m-%d-%H-%M")
-            printf "$tanggal"
             cronManage;;
         *)
             echo "Terimakasih telah menggunakan aplikasi"
